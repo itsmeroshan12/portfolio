@@ -1,0 +1,44 @@
+import { Button } from "../components/Button";
+
+const navLinks = [
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#experience", label: "Experience" },
+    { href: "#testimonials", label: "Testimonials" },
+    // {href: "#contact", label: "Contact" },
+
+
+]
+
+export const Navbar = () => {
+    return (
+        <header className="fixed top-0 left-0 bg-trasparent right-0 py-5">
+            <nav className="contaier mx-auto px-6 flex items-center justify-between">
+                <a href="#" className="text-xl font-bold traking-tight hover:text-primary">
+                    RN<span className="text-primary"></span>
+                </a>
+                {/* Desktop Nav */}
+                <div>
+                    <div className="hidden md:flex itmes-center gap-1">
+                        <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
+                            {navLinks.map((link, index) => (
+                                <a
+                                    href={link.href}
+                                     key={index}
+                                     className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full bg-surface"
+                                     >
+                                    {link.label}
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+                {/* CTA Button */}
+                <div>
+                    <Button size="sm">Contact Me</Button>
+                </div>
+            </nav>
+        </header>
+    );
+
+};

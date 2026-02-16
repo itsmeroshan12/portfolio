@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "background-color: color-mix(in srgb, var(--color-surface) 50%, trasparent)",
+          "border: 1px solid color-mix(in srgb, var(--color-border) 50%, traspaerent)"
+        ]
+      }
+    ]
+  }
+}
